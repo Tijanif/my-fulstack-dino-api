@@ -1,14 +1,14 @@
-# React Express Starter Pack
+# Dino Generator
 
-> Create full stack apps with React and Express. Run your client and server with a single command. 
+> Wanted to practice with a fullstack application using node.js, express and React. Used [Dino Ipsum](https://rapidapi.com/alexnormand/api/dino-ipsum/) API for my Dinosaur names and [Bing Image Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-image-search1/) for the images.
 
-### Redux Version
-This version does not include Redux
-[Click Here For Redux Version](https://github.com/bradtraversy/react_redux_express_starter) 
+## Created with React Express Starter Pack By Brad Traversy
+
+[Traversy Media](http://www.traversymedia.com)
 
 ## Quick Start
 
-``` bash
+```bash
 # Install dependencies for server
 npm install
 
@@ -31,8 +31,7 @@ npm run client
 
 ### Author
 
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
+Tijani Fulani
 
 ### Version
 

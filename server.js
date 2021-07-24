@@ -1,9 +1,14 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 const express = require('express');
 const cors = require('cors');
 const fetch = require('node-fetch');
 
 const app = express();
 
+const api_key = process.env.API_KEY;
 // Get Dinosaur names from Dino Ipsum API
 app.get('/dinoName', async (req, res) => {
   const fetchApi = await fetch(
@@ -11,7 +16,7 @@ app.get('/dinoName', async (req, res) => {
     {
       method: 'GET',
       headers: {
-        'x-rapidapi-key': '419efc62d7msh8186214d37ac7a1p1323fbjsn17dc140ebc41',
+        'x-rapidapi-key': api_key,
         'x-rapidapi-host': 'alexnormand-dino-ipsum.p.rapidapi.com',
       },
     }
@@ -28,7 +33,7 @@ app.get('/dinoImage', async (req, res) => {
     {
       method: 'GET',
       headers: {
-        'x-rapidapi-key': '419efc62d7msh8186214d37ac7a1p1323fbjsn17dc140ebc41',
+        'x-rapidapi-key': api_key,
         'x-rapidapi-host': 'bing-image-search1.p.rapidapi.com',
       },
     }

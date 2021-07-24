@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './dino.css';
 
 const Dino = () => {
   console.log('I am running');
   const [dino, setDino] = useState('');
-  const [dinoImgage, setDinoImage] = useState(null);
+  const [dinoImage, setDinoImage] = useState(null);
 
   // Get Dinosaur name from Server
   async function getDinoName() {
@@ -17,9 +17,9 @@ const Dino = () => {
   async function getDinoImage() {
     const res = await fetch('/dinoImage');
     const data = await res.json();
-    let dinoImage =
-      data.value[Math.floor(Math.random() * data.value.length)].thumbnailUrl;
-    return dinoImage;
+    let dinoImage = data.value[Math.floor(Math.random() * data.value.length)];
+    let dinoImageUrl = dinoImage.thumbnailUrl;
+    return dinoImageUrl;
   }
 
   const getDinosaurNameAndImage = () => {
@@ -34,13 +34,12 @@ const Dino = () => {
     });
   };
 
-  useEffect(() => {}, []);
-
   return (
     <div>
       <h1>Welcome to Dino Generator</h1>
       <button onClick={getDinosaurNameAndImage}>Click to get a Dinosaur</button>
       <div id='dinoName'>{dino}</div>
+      <img src={dinoImage} alt={dino} />
     </div>
   );
 };

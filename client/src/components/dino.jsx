@@ -5,26 +5,25 @@ const Dino = () => {
   console.log('I am running');
   // const [dino, setDino] = useState;
 
-  // const fetchData = () => {
-  //   return fetch('https://randomuser.me/api/')
-  //     .then((response) => response.json())
-  //     .then((data) => console.log(data));
-  // };
-
   async function getDinoName() {
     const res = await fetch('/dinoName');
     const data = await res.json();
-    console.log(data);
+    let dinoName = data[0].join(' ');
+    console.log('I am dino name:', dinoName);
   }
 
-  // getDinoName();
-  useEffect(() => {
+  // useEffect(() => {
+  //   getDinoName();
+  // }, []);
+
+  const getDinosaur = () => {
     getDinoName();
-  }, []);
+  };
 
   return (
     <div>
       <h1>Welcome to Dino Generator</h1>
+      <button onClick={getDinosaur}>Click to get a Dinosaur</button>
     </div>
   );
 };

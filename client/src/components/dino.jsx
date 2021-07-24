@@ -35,11 +35,13 @@ const Dino = () => {
   };
 
   return (
-    <div>
+    <div class='main-wrapper'>
       <h1>Welcome to Dino Generator</h1>
       <button onClick={getDinosaurNameAndImage}>Click to get a Dinosaur</button>
-      <div id='dinoName'>{dino}</div>
-      <img src={dinoImage} alt={dino} />
+      <section className='dinosaur-wrapper'>
+        <div className='dinosaur-name'>{dino}</div>
+        <img className='dinosaur-image' src={dinoImage} alt={dino} />
+      </section>
     </div>
   );
 };

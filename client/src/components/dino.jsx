@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './dino.css';
 
 const Dino = () => {
   console.log('I am running');

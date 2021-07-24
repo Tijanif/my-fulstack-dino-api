@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './App.css';
-import Dino from './components/dino';
+import Dino from './components/dino.jsx';
 
-class App extends Component {
-  render() {
-    return (
-      <div className='App'>
-        <Dino />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className='App'>
+      <Dino />
+    </div>
+  );
+};
 
 export default App;

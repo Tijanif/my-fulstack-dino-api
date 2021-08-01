@@ -16,7 +16,7 @@ button {
   border: none;
   color: hsl(0, 0%, 100%);
   padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
   transition: background-color 150ms ease-in-out;
   cursor: pointer;
   text-transform: uppercase;
